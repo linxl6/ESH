@@ -1,0 +1,584 @@
+/*
+  By Nisal 2017-03-03 18:41
+  To all pages
+*/
+
+
+/* Init */
+/********/
+::scrollbar{display: none;}
+::-o-scrollbar{display: none;}
+::-webkit-scrollbar{display: none;}
+*{margin: 0; padding: 0;}
+html, body{width: 100%; height: auto; font-family: "Helvetica Neue",Helvetica,Arial,"Microsoft Yahei","Hiragino Sans GB","Heiti SC","WenQuanYi Micro Hei",sans-serif;}
+#warpper, section, header{width: 100%; height: auto;}
+input, button{outline:none;}
+
+/* Globol Style */
+/****************/
+
+.white-color{color: #fff;}
+.yello-background{background-color: #fffd1f;}
+
+/* Header Style */
+/****************/
+
+header{
+  z-index: 50;
+  height: 50px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #1d54a6;
+}
+
+header .backBtn{
+  display: inline-block;;
+  margin-top: 7px;
+  margin-left: 5px;
+  padding: 9px;
+  padding-left: 11px;
+  color:#fff;
+  height: 35px;
+  width: 35px;
+  transition: all 0.3s ease 0s;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+header .backBtn:hover{
+  background: #123e80;
+}
+
+header .title{
+  display: inline-block;
+  color: #FFF;
+  padding-left: 5px;
+}
+
+header .headMenu{
+  display: inline-block;;
+  width: 40px;
+  height: 40px;
+  margin: 5px;
+  cursor: pointer;
+}
+
+header .headMenu img{
+  border-radius: 50% 50%;
+}
+
+/* Entrance Style */
+/***************/
+
+#entrance{
+  text-align: center;
+  width: 100%;
+}
+
+#entrance .logo img{
+  max-width: 250px;
+  margin-top: 10%;
+}
+
+#entrance .logoInfo{
+  color: #fff;
+  font-size: 28px;
+  margin-top: 25px;
+  margin-bottom: 70px;
+}
+
+#entrance .signin{
+  width: 100%;
+}
+
+#entrance .inputer{
+  width: 80%;
+  margin: auto;
+  border-bottom: 1px solid #5a587b;
+  margin-top: 20px;
+  padding-bottom: 10px;
+  color: #5a587b;
+  font-size: 20px;
+}
+
+#entrance button{
+  width: 100%;
+  background: #f4386a;
+  border: 0;
+  height: 60px;
+  color: #fff;
+  font-size: 16px;
+  margin-top: 10px;
+  border-radius: 2px;
+}
+
+#entrance .inputer input{
+  width: 80%;
+  border: 0;
+  background: none;
+  color: #fff;
+  margin-left: 20px;
+  font-size: 14px;
+}
+
+#entrance .signup{
+  width: 100%;
+  text-align: center;
+  font-size: 10px;
+  color: #c6c6c6;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+#entrance a{
+  color: #fff;
+}
+
+/* Signup Style*/
+/***************/
+
+#signup{
+  margin-top: 50px;
+}
+
+#signup .checkForm{
+  padding-top: 30px;
+  margin: auto;
+  width: 90%;
+}
+
+#signup .checkForm input{
+  display: inline-block;
+  width: 100%;
+  height: 40px;
+  border-radius: 2px 0px 0px 2px;
+  border: 0px none;
+  padding-left: 20px;
+  font-size: 20px;
+}
+
+#signup .checkForm button{
+  display: inline-block;
+  width: 100%;
+  height: 40px;
+  border-radius: 0px 2px 2px 0px;
+  border: 0px none;
+  background: #1a58aa;
+  color: #fff;
+  font-weight: 900;
+  transition: all 0.3s ease 0s;
+}
+
+#signup .checkForm .forbiden{
+  background: #c7c7c7;
+}
+
+#signup .checkForm div{
+  float: left;
+}
+
+#signup .checkFormInfo{
+  margin-top: 10px;
+  color: #696969;
+}
+
+#signup .btnHover:hover{
+  background: #0f448a;
+}
+
+/* ok style */
+/************/
+
+#ok{
+  width: 100%;
+  height: auto;
+  margin-top: 50px;
+  text-align: center;
+}
+
+#ok .okIcon{
+  padding-top: 50px;
+  font-size: 40px;
+}
+
+#ok .okIcon span{
+  border-radius: 50% 50%;
+  background: #12903d;
+  padding:40px;
+  color: #FFF;
+}
+
+#ok button{
+  margin-top: 50px;
+  display: inline-block;
+  width: 90%;
+  height: 40px;
+  border-radius: 0px 2px 2px 0px;
+  border: 0px none;
+  background: #1a58aa;
+  color: #fff;
+  font-weight: 900;
+  transition: all 0.3s ease 0s;
+}
+
+#ok button:hover{
+  background: #0f448a;
+}
+
+/* initSettings Style */
+/******************/
+
+#initSettings{
+  width: 100%;
+  height: auto;
+  margin-top: 50px;
+}
+
+#initSettings ul{
+  list-style-type: none;
+  margin-bottom: 20px;
+}
+
+#initSettings ul li{
+  width: 100%;
+  height: 50px;
+  background: #fff;
+  border-bottom: 1px solid #d7d5d5;
+  line-height: 50px;
+}
+
+#initSettings ul li .itemName, #initSettings ul li .item{
+  float: left;
+  font-size: 16px;
+}
+
+#initSettings ul li .itemName{
+  width: 20%;
+  text-align: center;
+}
+
+#initSettings ul li .item{
+  width: 80%;
+  background: none;
+
+}
+
+#initSettings ul li input{
+  width: 100%;
+  height: 30px;
+  border: 0;
+  margin-top: 10px;
+  line-height: 30px;
+  padding-left: 15px;
+}
+
+#initSettings button{
+  margin-top: 10px;
+  display: inline-block;
+  width: 100%;
+  height: 40px;
+  border-radius: 0px 2px 2px 0px;
+  border: 0px none;
+  background: #1a58aa;
+  color: #fff;
+  font-weight: 900;
+  transition: all 0.3s ease 0s;
+}
+
+/* Select Mode Style*/
+/********************/
+
+#selectMode{
+  padding-top: 50px;
+  width: 100%;
+}
+
+#selectMode .moder{
+  margin: auto;
+  height: 80px;
+  width: 90%;
+  color: #FFF;
+  margin-top: 10px;
+  padding-left: 30px;
+  padding-right: 30px;
+  font-size: 26px;
+  border-radius: 2px;
+  line-height: 80px;
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+}
+
+/* trade mode style*/
+/*******************/
+
+#tradeMode{
+  width: 100%;
+  margin-top: 50px;
+}
+
+
+#tradeMode ul {
+	list-style-type: none;
+}
+
+#tradeMode a {
+	color: #b63b4d;
+	text-decoration: none;
+}
+
+#tradeMode h1 {
+ 	color: #FFF;
+ 	font-size: 24px;
+ 	font-weight: 400;
+ 	text-align: center;
+ }
+
+#tradeMode h1 a {
+ 	color: #c12c42;
+ 	font-size: 16px;
+ }
+
+ #tradeMode .accordion {
+ 	width: 100%;
+ 	background: #FFF;
+ }
+
+#tradeMode .accordion .link {
+	background: #e8e8e8;
+	cursor: pointer;
+	display: block;
+	padding: 15px 15px 15px 42px;
+	color: #4D4D4D;
+	font-size: 14px;
+	font-weight: 700;
+	border-bottom: 1px solid #CCC;
+	position: relative;
+	-webkit-transition: all 0.4s ease;
+	-o-transition: all 0.4s ease;
+	transition: all 0.4s ease;
+}
+
+#tradeMode .accordion li:last-child .link {
+	border-bottom: 0;
+}
+
+#tradeMode .accordion li i {
+	position: absolute;
+	/*top: 16px;*/
+	left: 12px;
+	font-size: 18px;
+	color: #595959;
+	-webkit-transition: all 0.4s ease;
+	-o-transition: all 0.4s ease;
+	transition: all 0.4s ease;
+}
+
+#tradeMode .accordion li i.fa-chevron-down {
+	right: 12px;
+	left: auto;
+	font-size: 16px;
+}
+
+#tradeMode .accordion li.open .link {
+	color: #b63b4d;
+}
+
+#tradeMode .accordion li.open i {
+	color: #b63b4d;
+}
+
+#tradeMode .accordion li.open i.fa-chevron-down {
+	-webkit-transform: rotate(180deg);
+	-ms-transform: rotate(180deg);
+	-o-transform: rotate(180deg);
+	transform: rotate(180deg);
+}
+
+ #tradeMode .submenu {
+ 	display: none;
+ 	background: #444359;
+ 	font-size: 14px;
+ }
+
+ #tradeMode .submenu li {
+ 	border-bottom: 1px solid #4b4a5e;
+ }
+
+ #tradeMode .submenu a {
+ 	display: block;
+ 	text-decoration: none;
+ 	color: #d9d9d9;
+ 	padding: 12px;
+ 	padding-left: 42px;
+ 	-webkit-transition: all 0.25s ease;
+ 	-o-transition: all 0.25s ease;
+ 	transition: all 0.25s ease;
+ }
+
+ #tradeMode .submenu a:hover {
+ 	background: #b63b4d;
+ 	color: #FFF;
+ }
+
+/* modeInfo */
+/************/
+
+#modeInfo{
+  width: 100%;
+}
+
+#modeInfo .modeInfoWarpper{
+  width: 100%;
+  position: fixed;
+  height: 100%;
+}
+
+#modeInfo .modeInfoWarpper .img{
+  padding-top: 50px;
+  height: 68%;
+  width: 100%;
+  overflow: hidden;
+  overflow-y: scroll;
+}
+
+#modeInfo .modeInfoWarpper .img img{
+  max-width: 100%;
+}
+
+#modeInfo .modeInfoWarpper .nav{
+  height: 25%;
+  box-shadow: 0px 0px 100px #000;
+  width: 100%;
+  position: absolute;
+  z-index: 2px;
+}
+
+#modeInfo .start{
+  width: 100%;
+  height: 8%;
+  position: absolute;
+  color: #fff;
+  background: #1666a1;
+  bottom: 0;
+  text-align: center;
+  font-size: 20px;
+}
+
+#modeInfo .start button{
+  background: #1666a1;
+  width: 100%;
+  height: 100%;
+  border: 0 none;
+}
+
+#modeInfo .modeInfoWarpper .nav .menu{
+  height: 100%;
+  width: 30%;
+  float: left;
+  overflow: hidden;
+  overflow-y: scroll;
+  border-right: 1px solid #ececec;
+}
+
+#modeInfo .modeInfoWarpper .nav .menu li{
+  height: 40px;
+  width: 100%;
+  border-bottom: 1px solid #ececec;
+  font-size: 18px;
+  padding-left: 5px;
+  line-height: 40px;
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+}
+
+#modeInfo .modeInfoWarpper .nav ul .active, #modeInfo .modeInfoWarpper .nav .menu li:hover{
+  background: #206cb3;
+  color: #fff;
+}
+
+#modeInfo .modeInfoWarpper .nav .intruduce{
+  height: 100%;
+  width: 70%;
+  float: left;
+  overflow: hidden;
+  overflow-y: scroll;
+  padding: 5px;
+}
+
+#modeInfo #hide{
+  position: fixed;
+  top: 60px;
+  right: 10px;
+  z-index: 100;
+  background: #2366b4;
+  color: #fff;
+  width: 35px;
+  height: 35px;
+  font-size: 14px;
+  text-align: center;
+  line-height: 25px;
+  padding-top: 5px;
+  box-shadow: 0px 0px 10px #000;
+  border-radius: 50% 50%;
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+}
+
+#modeInfo #hide:hover{
+  background: #ff5050;
+  box-shadow: 0px 0px 10px #ff8383;
+}
+
+
+/* bg */
+/******/
+
+#bg{
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  position: fixed;
+}
+
+.bg{
+  transition: all 0.3 ease 0s;
+}
+
+.signin-bg{
+  background: #000002; /* Old browsers */
+  background: -moz-linear-gradient(-45deg,  #000002 2%, #615fa0 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(-45deg,  #000002 2%,#615fa0 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(135deg,  #000002 2%,#615fa0 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000002', endColorstr='#615fa0',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+
+.signup-bg, .ok-bg, .initSettings-bg, .common-bg, .tradeMode-bg, .modeInfo-bg, .treatWay-bg{background: #f2f0f1;}
+
+.red-bg{background: #ff4d5f;}
+.red-bg:hover{background: #f9273c;}
+
+.green-bg{background: #1aa73d;}
+.green-bg:hover{background: #0f8f2f;}
+
+/* Responsive Layout */
+/*********************/
+
+@media only screen and (max-width: 1100px){
+  section .item{
+    width: 25.0%;
+  }
+  section .item .itemTitle{
+    font-size: 18px;
+  }
+}
+
+@media only screen and (max-width: 768px){
+  section .item{
+    /*width: 33.3333333%;*/
+    width: 50%;
+  }
+  section .item .itemTitle{
+    font-size: 14px;
+  }
+}

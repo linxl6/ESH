@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/component.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+  </head>
+  <body>
+
+    <div id="warpper">
+      <div id="bg" class="common-bg"></div>
+      <header>
+        <div class="">
+          <div class="headMenu">
+            <img src="./assets/images/head.jpg" width="100%" alt="">
+          </div>
+          <div class="title">
+            选择模式
+          </div>
+        </div>
+      </header>
+      <section id="selectMode">
+
+        <div class="bg green-bg moder" style="float: left; text-align: right;">
+          <div>治疗模式</div>
+        </div>
+
+        <div class="bg red-bg moder" style="float: right;">
+          <div>学习模式</div>
+        </div>
+
+      </section>
+    </div>
+
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/oha/jquery.cookie.js"></script>
+    <script src="assets/js/oha/oha_config.js"></script>
+    <script src="assets/js/oha/oha_api.js"></script>
+    <script src="assets/js/oha/oha_timer.js"></script>
+    <script src="assets/js/layer/layer.js"></script>
+    <script src="assets/js/layer/mobile/layer.js" charset="utf-8"></script>
+    <!-- <script src="assets/js/classie.js"></script> -->
+    <script src="assets/js/quietflow.min.js"></script>
+    <script src="assets/js/background.js"></script>
+
+    <script>
+      $(".moder").click(function(){
+        layer.open({
+          type: 2
+          ,content: 'Loading...'
+        });
+      });
+    </script>
+
+
+  </body>
+</html>

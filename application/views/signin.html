@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+    <link rel="stylesheet" href="/ESH/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/ESH/assets/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/ESH/assets/css/component.css">
+    <link rel="stylesheet" href="/ESH/assets/css/style.css">
+  </head>
+  <body>
+
+    <div id="warpper">
+      <div id="bg" class="signin-bg"></div>
+      <section id="entrance">
+        <div class="logo">
+          <img src="/ESH/assets/images/logo2.png" alt="">
+        </div>
+        <div class="logoInfo">
+          ESH
+        </div>
+        <div class="signin">
+          <form action="../index.php/user/User/userlogin" method="post">
+            <div class="inputer">
+              <span class="glyphicon glyphicon-user"></span>
+              <input type="userName" placeholder="手机号/账号">
+            </div>
+            <div class="inputer">
+              <span class="glyphicon glyphicon-lock"></span>
+              <input type="password" placeholder="密码">
+            </div>
+            <div class="inputer" style="border: 0">
+              <button type="submit">登入</button>
+            </div>
+          </form>
+          <div class="signup">
+            没有账户？点这里<a href="">注册</a>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <script src="/ESH/assets/js/jquery.min.js"></script>
+    <script src="/ESH/assets/js/bootstrap.min.js"></script>
+    <script src="/ESH/assets/js/oha/jquery.cookie.js"></script>
+    <script src="/ESH/assets/js/oha/oha_config.js"></script>
+    <script src="/ESH/assets/js/oha/oha_api.js"></script>
+    <script src="/ESH/assets/js/oha/oha_timer.js"></script>
+    <script src="/ESH/assets/js/classie.js"></script>
+    <script>
+    $("input").focus(function(){
+      $(this).css("border", "0px");
+    });
+    // (function() {
+    //   if (!String.prototype.trim) {
+    //     (function() {
+    //       // Make sure we trim BOM and NBSP
+    //       var rtrim = /^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g;
+    //       String.prototype.trim = function() {
+    //         return this.replace(rtrim, '');
+    //       };
+    //     })();
+    //   }
+    //
+    //   [].slice.call( document.querySelectorAll( 'input.input__field' ) ).forEach( function( inputEl ) {
+    //     // in case the input is already filled..
+    //     if( inputEl.value.trim() !== '' ) {
+    //       classie.add( inputEl.parentNode, 'input--filled' );
+    //     }
+    //
+    //     // events:
+    //     inputEl.addEventListener( 'focus', onInputFocus );
+    //     inputEl.addEventListener( 'blur', onInputBlur );
+    //   } );
+    //
+    //   function onInputFocus( ev ) {
+    //     classie.add( ev.target.parentNode, 'input--filled' );
+    //   }
+    //
+    //   function onInputBlur( ev ) {
+    //     if( ev.target.value.trim() === '' ) {
+    //       classie.remove( ev.target.parentNode, 'input--filled' );
+    //     }
+    //   }
+    // })();
+    </script>
+  </body>
+</html>
+
+<!-- <span class="input input--hoshi">
+  <input class="input__field input__field--hoshi" type="text" id="" />
+  <label class="input__label input__label--hoshi input__label--hoshi-color-3" for="">
+    <span class="input__label-content input__label-content--hoshi"><span class="fa fa-user"></span>&emsp;&emsp;账号</span>
+  </label>
+</span>
+<span class="input input--hoshi">
+  <input class="input__field input__field--hoshi" type="password" id="" />
+  <label class="input__label input__label--hoshi input__label--hoshi-color-3" for="">
+    <span class="input__label-content input__label-content--hoshi"><span class="fa fa-user"></span>&emsp;&emsp;密码</span>
+  </label>
+</span> -->

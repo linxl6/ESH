@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/component.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+  </head>
+  <body>
+
+    <div id="warpper">
+      <div id="bg" class="modeInfo-bg"></div>
+      <header>
+        <div class="">
+          <div class="backBtn">
+            <span class="glyphicon glyphicon-chevron-left"></span>
+          </div>
+          <div class="title">
+            头痛-头后半部分痛
+          </div>
+        </div>
+      </header>
+      <section id="modeInfo">
+        <div class="modeInfoWarpper">
+          <div class="img">
+            <div class="pinch-zoom">
+              <img src="assets/images/x.png"/>
+            </div>
+          </div>
+          <div class="nav">
+            <div class="menu">
+              <ul>
+                <li class="active">xx</li>
+                <li>yy</li>
+                <li>zz</li>
+                <li>nnnn</li>
+                <li>9999</li>
+              </ul>
+            </div>
+            <div class="intruduce">
+              <div class="">
+                你说人生如梦，我说人生如秀，那忧伤么不同，不都一样朦胧。朦胧中有你 有你跟我就已经足够，你就在我的世界。升起了彩虹。
+                你说人生如梦，我说人生如秀，那忧伤么不同，不都一样朦胧。朦胧中有你 有你跟我就已经足够，你就在我的世界。升起了彩虹。
+              </div>
+            </div>
+          </div>
+          <div class="start">
+            <button>开始治疗</button>
+          </div>
+        </div>
+        <div id="hide">
+          隐藏
+        </div>
+      </section>
+    </div>
+
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/oha/jquery.cookie.js"></script>
+    <script src="assets/js/oha/oha_config.js"></script>
+    <script src="assets/js/oha/oha_api.js"></script>
+    <script src="assets/js/oha/oha_timer.js"></script>
+    <script src="assets/js/classie.js"></script>
+    <script src="assets/js/pinchzoom.min.js" charset="utf-8"></script>
+    <script type="text/javascript">
+      $(document).ready(function(){
+        $(".start").css("line-height", $(".start").css("height"));
+        $(window).resize(function(){
+          $(".start").css("line-height", $(".start").css("height"));
+        });
+        $('.pinch-zoom').each(function () {
+          new RTP.PinchZoom($(this), {});
+        });
+      });
+    </script>
+  </body>
+</html>
