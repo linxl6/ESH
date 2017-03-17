@@ -5,10 +5,10 @@
     <title></title>
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/font-awesome.min.css">
-    <link rel="stylesheet" href="assets/css/component.css">
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="/ESH/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/ESH/assets/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/ESH/assets/css/component.css">
+    <link rel="stylesheet" href="/ESH/assets/css/style.css">
   </head>
   <body>
 
@@ -16,7 +16,7 @@
       <div id="bg" class="signup-bg"></div>
       <header>
         <div class="">
-          <div class="backBtn">
+          <div class="backBtn" onclick="load('/ESH')">
             <span class="glyphicon glyphicon-chevron-left"></span>
           </div>
           <div class="title">
@@ -25,6 +25,7 @@
         </div>
       </header>
       <section id="signup">
+      <form action="/ESH/index.php/user/user/user_register_sc">
         <div class="checkForm">
           <div class="" style="width: 65%;">
             <input type="text">
@@ -32,25 +33,25 @@
           <div class="" style="width: 35%;">
             <button class="" id="getCode">获取验证码</button>
           </div>
-          <div class="checkFormInfo">请输入获取的验证码后完成注册&emsp;<a href="">没有手机号？</a></div>
+          <div class="checkFormInfo">请输入获取的验证码后完成注册&emsp;<a href="/ESH/index.php/user/user/user_register_initSetting">没有手机号？</a></div>
         </div>
         <div class="checkForm">
-          <button style="margin-top: 30px;" class="btnHover">下一步</button>
+          <button style="margin-top: 30px;" class="btnHover" type="submit">下一步</button>
           <div class="" style="text-align: center; width: 100%; padding-top: 20px;">
-            <a href="">使用第三方登陆</a>
+            <a href="/ESH/index.php/user/user/user_register_thirdPartSignin">使用第三方登陆</a>
           </div>
         </div>
-
+      </form>
       </section>
     </div>
 
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/js/bootstrap.min.js"></script>
-    <script src="assets/js/oha/jquery.cookie.js"></script>
-    <script src="assets/js/oha/oha_config.js"></script>
-    <script src="assets/js/oha/oha_api.js"></script>
-    <script src="assets/js/oha/oha_timer.js"></script>
-    <script src="assets/js/classie.js"></script>
+    <script src="/ESH/assets/js/jquery.min.js"></script>
+    <script src="/ESH/assets/js/bootstrap.min.js"></script>
+    <script src="/ESH/assets/js/oha/jquery.cookie.js"></script>
+    <script src="/ESH/assets/js/oha/oha_config.js"></script>
+    <script src="/ESH/assets/js/oha/oha_api.js"></script>
+    <script src="/ESH/assets/js/oha/oha_timer.js"></script>
+    <script src="/ESH/assets/js/classie.js"></script>
     <script>
     $(document).ready(function(){
       $("#getCode").click(function(){
@@ -70,6 +71,9 @@
         }, 1000);
       });
     });
+    function load(url){
+      window.location.href=url;
+    }
     // (function() {
     //   if (!String.prototype.trim) {
     //     (function() {

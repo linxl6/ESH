@@ -5,10 +5,10 @@
     <title></title>
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/font-awesome.min.css">
-    <link rel="stylesheet" href="assets/css/component.css">
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="/ESH/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/ESH/assets/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/ESH/assets/css/component.css">
+    <link rel="stylesheet" href="/ESH/assets/css/style.css">
   </head>
   <body>
 
@@ -16,7 +16,7 @@
       <div id="bg" class="initSettings-bg"></div>
       <header>
         <div class="">
-          <div class="backBtn">
+          <div class="backBtn" onclick="load('/ESH')">
             <span class="glyphicon glyphicon-chevron-left"></span>
           </div>
           <div class="title">
@@ -24,7 +24,7 @@
           </div>
         </div>
       </header>
-      <form action="" method="post">
+      <form action="/ESH/index.php/user/user/user_do_register" method="post">
       <section id="initSettings">
         <ul>
           <li>
@@ -68,13 +68,13 @@
       </form>
     </div>
 
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/js/bootstrap.min.js"></script>
-    <script src="assets/js/oha/jquery.cookie.js"></script>
-    <script src="assets/js/oha/oha_config.js"></script>
-    <script src="assets/js/oha/oha_api.js"></script>
-    <script src="assets/js/oha/oha_timer.js"></script>
-    <script src="assets/js/classie.js"></script>
+    <script src="/ESH/assets/js/jquery.min.js"></script>
+    <script src="/ESH/assets/js/bootstrap.min.js"></script>
+    <script src="/ESH/assets/js/oha/jquery.cookie.js"></script>
+    <script src="/ESH/assets/js/oha/oha_config.js"></script>
+    <script src="/ESH/assets/js/oha/oha_api.js"></script>
+    <script src="/ESH/assets/js/oha/oha_timer.js"></script>
+    <script src="/ESH/assets/js/classie.js"></script>
     <script>
     $(document).ready(function(){
       $("#getCode").click(function(){
@@ -94,6 +94,9 @@
         }, 1000);
       });
     });
+    function load(url){
+      window.location.href=url;
+    }
     // (function() {
     //   if (!String.prototype.trim) {
     //     (function() {
