@@ -1,21 +1,33 @@
 <?php
-	class user extends CI_Controller
+	class User extends CI_Controller
 	{
-		public function userlogin()
+		public function index(){
+			echo "user_controller";
+		}
+
+		public function user_do_login()
 		{
-			$post = $this->input->post;
-			$userName = $post['userName'];
-			$password = $post['password'];
-			$this->load->database();
-			$query = $this->db->query('select user_id from user_login where username = $userName and password = $password');
-			if($query)
-			{
+			$this->load->view('selectMode.html');
+		}
 
-			}
-			else
-			{
+		public function user_register(){
+			$this->load->view('signup.html');
+		}
 
-			}
+		public function user_register_sc(){
+			$this->load->view('signupSC.html');
+		}
+
+		public function user_register_initSetting(){
+			$this->load->view('initSettings.html');
+		}
+
+		public function user_register_thirdPartSignin(){
+			$this->load->view('thirdPartSignin.html');
+		}
+
+		public function user_do_register(){
+			$this->load->view('ok.html');
 		}
 	}
 

@@ -23,8 +23,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | a PHP script and you can easily do that on your own.
 |
 */
-$config['base_url'] = 'localhost:8080/ESH/application';
-$config['css_url'] = 'localhost:8080/ESH/application/views/assets';
+$config['base_url'] = '/ESH/application';
+// $config['css_url'] = '/ESH/application/views/assets';
 /*
 |--------------------------------------------------------------------------
 | Index File
@@ -36,6 +36,7 @@ $config['css_url'] = 'localhost:8080/ESH/application/views/assets';
 |
 */
 $config['index_page'] = 'index.php';
+// $config['index_page'] = '';
 
 /*
 |--------------------------------------------------------------------------

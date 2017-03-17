@@ -23,21 +23,21 @@
           ESH
         </div>
         <div class="signin">
-          <form action="../index.php/user/User/userlogin" method="post">
+          <form action="/ESH/index.php/user/user/user_do_login" method="post">
             <div class="inputer">
               <span class="glyphicon glyphicon-user"></span>
-              <input type="userName" placeholder="手机号/账号">
+              <input type="userName" placeholder="手机号/账号" name="account">
             </div>
             <div class="inputer">
               <span class="glyphicon glyphicon-lock"></span>
-              <input type="password" placeholder="密码">
+              <input type="password" placeholder="密码" name="password">
             </div>
             <div class="inputer" style="border: 0">
               <button type="submit">登入</button>
             </div>
           </form>
           <div class="signup">
-            没有账户？点这里<a href="">注册</a>
+            没有账户？点这里<a href="/ESH/index.php/user/user/user_register">注册</a>
           </div>
         </div>
       </section>
