@@ -7,13 +7,12 @@
 		//登入
 		public function user_do_login()
 		{
-			//var_dump( $_POST);
 			$userAccount = $_POST['account'];
 			$password = $_POST['password'];
 			$this->load->model('userOperation');
 			$result = $this->userOperation->userLogin($userAccount,$password);
 			if ($result) $this->load->view('selectMode.html');
-			$this->load->view('signin.html');
+			else $this->load->view('signin.html');
 		}
 
 		public function user_register(){
@@ -40,14 +39,9 @@
 			$age = $this->input->post('age');
 			if(empty($userAccount)||empty($password)||empty($tpassword)||empty($username)||empty($age))
 			{
-				// var_dump($username); 
-				// var_dump($password);
-				// var_dump($tpassword);
-				// var_dump($userAccount);
-				// var_dump($age);
-				// exit();
 				$this->load->view('initSettings.html');
-			}else
+			}
+			else
 			{
 				if($password == $tpassword)
 				{
