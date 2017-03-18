@@ -17,6 +17,13 @@
 			$row = $query->result_array();
 			if(sizeof($row))
 			{
+				/**
+				 * 更改登录时间
+				 * @var [type]
+				 */
+				$user_id = $row[0]["user_id"];
+				$sql1 = "update user_login set last_time = NOW() where user_id = 1";
+				$this->db->query($sql1);
 				return 1;
 			}
 			else
@@ -33,7 +40,7 @@
 		{
 			$this->load->database();
 			$data = array('user_account'=>$userAccount,'user_name'=>$username,'password'=>$password,'user_age'=>$age);
-			var_dump($data);
+			//var_dump($data);
 			$str = $this->db->insert_string('user_login',$data);
 			$this->load->model('userOperation');
 			return $this->userOperation->SQLquery($str);
@@ -47,10 +54,17 @@
 		public function SQLquery($str)
 		{
 			$this->load->database();
-			$num = $this->db->query($str);
-			//$num = $this->db->insert_id();
-			//exit($num);
-			return $num;
+			$result = $this->db->query($str);
+			return $result;
+		}
+		public function getUserAccount()
+		{
+			$str = "select user_account,user_name from user_login";
+			$this->load->model('userOperation');
+			$result = $this->userOperation->SQLquery($str);
+			// var_dump($result->result_array());
+			// exit();
+			return $result->result_array();
 		}
 	}
 
