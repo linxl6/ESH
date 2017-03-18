@@ -40,7 +40,7 @@
 		{
 			$this->load->database();
 			$data = array('user_account'=>$userAccount,'user_name'=>$username,'password'=>$password,'user_age'=>$age);
-			//var_dump($data);
+
 			$str = $this->db->insert_string('user_login',$data);
 			$this->load->model('userOperation');
 			return $this->userOperation->SQLquery($str);
