@@ -10,9 +10,10 @@
 			$userAccount = $_POST['account'];
 			$password = $_POST['password'];
 			$this->load->model('userOperation');
-			$result = $this->userOperation->userLogin($userAccount,$password);
+			$result = $this->userOperation->userLogin($userAccount,MD5($password));
 			if ($result) $this->load->view('selectMode.html');
 			else $this->load->view('signin.html');
+
 		}
 
 		public function user_register(){
@@ -39,14 +40,26 @@
 			$age = $this->input->post('age');
 			if(empty($userAccount)||empty($password)||empty($tpassword)||empty($username)||empty($age))
 			{
+
 				$this->load->view('initSettings.html');
 			}
 			else
 			{
+				$this->load->model('userOperation');
+				$userArray = $this->userOperation->getUserAccount();
+				//判断重复
+				foreach ($userArray as $row) {
+					if($userAccount == $row["user_account"]||$username == $row["user_name"])
+					{
+						$this->load->view('initSettings.html');
+						return;
+					}
+				}
+				//
 				if($password == $tpassword)
 				{
 					$this->load->model('userOperation');
-					if($this->userOperation->userRegister($userAccount,$username,$password,$age))
+					if($this->userOperation->userRegister($userAccount,$username,MD5($password),$age))
 					{
 						$this->load->view('ok.html');
 					}
