@@ -28,24 +28,37 @@
         <div class="modeInfoWarpper">
           <div class="img">
             <div class="pinch-zoom">
-              <img src="/ESH/assets/images/x.png"/>
+              <!-- <img src="/ESH/assets/images/x.png"/>
+              <img src="/ESH/assets/images/x.png"/> -->
+              <?php for($i=0; $i < count($result); $i++){ ?>
+                  <?php if($i==($treatMode-1)){ ?>
+                    <?php for($j=0; $j < count($result[$i]['ap_info']); $j++){ ?>
+                    <img src="<?php echo $result[$i]['ap_info'][$j]['ap_image_address'] ?>"/> 
+                    <?php } ?>
+                  <?php } ?>
+              <?php } ?>
             </div>
           </div>
           <div class="nav">
             <div class="menu">
               <ul>
-                <li class="active">xx</li>
-                <li>yy</li>
-                <li>zz</li>
-                <li>nnnn</li>
-                <li>9999</li>
+                <?php for($i=0; $i < count($result); $i++){ ?>
+                  <?php if($i==($treatMode-1)){ ?>
+                    <a href="/ESH/index.php/mode/mode/mode_info/<?php echo $disease_id ?>/<?php echo $i+1 ?>"><li value="<?php echo $result[$i]['suggestion_id']?>" class="active"><?php echo $result[$i]['suggestion_name'] ?></li></a>
+                  <?php }else{ ?>
+                    <a href="/ESH/index.php/mode/mode/mode_info/<?php echo $disease_id ?>/<?php echo $i+1 ?>"><li value="<?php echo $result[$i]['suggestion_id']?>"><?php echo $result[$i]['suggestion_name'] ?></li></a>
+                  <?php } ?>
+                <?php } ?>
               </ul>
             </div>
             <div class="intruduce">
-              <div class="">
-                你说人生如梦，我说人生如秀，那忧伤么不同，不都一样朦胧。朦胧中有你 有你跟我就已经足够，你就在我的世界。升起了彩虹。
-                你说人生如梦，我说人生如秀，那忧伤么不同，不都一样朦胧。朦胧中有你 有你跟我就已经足够，你就在我的世界。升起了彩虹。
-              </div>
+                <?php for($i=0; $i < count($result); $i++){ ?>
+                  <?php if($i==($treatMode-1)){ ?>
+                    <div class="intruduce_content">
+                      <?php echo $result[$i]['suggextion_context'] ?>
+                    </div>
+                  <?php } ?>
+                <?php } ?>
             </div>
           </div>
           <div class="start">
