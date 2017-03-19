@@ -16,9 +16,16 @@ class Mode extends CI_Controller{
 		}
 	}
 
-	public function mode_info($disease_id){
-		// echo $disease_id;
-		
-		$this->load->view('modeInfo.html');
+	public function mode_info($disease_id,$treatMode){
+		$this->load->model('modeOperation');
+		$result=$this->modeOperation->getSuggestionByDisease_ID($disease_id);
+		$data['result']=$result;
+		$data['treatMode']=$treatMode;
+		$data['disease_id']=$disease_id;
+		if($result !='error'){
+			$this->load->view('modeInfo.html',$data);
+		}else{
+			echo '<h2>GET MODE INFOMATION ERROR</h2>';
+		}
 	}
 }

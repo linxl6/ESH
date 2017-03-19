@@ -32,6 +32,23 @@ class modeOperation extends CI_Model
 	 */
 	public function getSuggestionByDisease_ID($disease_id){
 		$this->load->database();
+		$sql="select * from disease_suggestion where disease_id=".$disease_id;
+		$query=$this->db->query($sql);
+		$row = $query->result_array();
+		for ($i=0; $i < count($row); $i++) { 
+			$sql2="select * from acupuncture_points where ap_id=".$row[$i]['ap_id'].(($row[$i]['ap_id2']==null)?"":(" or ap_id=".$row[$i]['ap_id2']));
+			$query2=$this->db->query($sql2);
+			$row2=$query2->result_array();
+			$row[$i]['ap_info']=$row2;
+		};
+		if(sizeof($row))
+		{
+			return $row;
+		}
+		else
+		{
+			return 'error';
+		}
 	}
 }
 

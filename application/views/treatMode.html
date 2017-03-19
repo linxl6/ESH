@@ -33,7 +33,7 @@
             <ul class="submenu">
             <?php foreach($result as $citem){ ?>
               <?php if($citem['father_disease_id']==$item['disease_id']){ ?>
-              <li><a href="/ESH/index.php/mode/mode/mode_info/<?php echo $citem['disease_id'] ?>"><?php echo $citem['disease_name'] ?></a></li>
+              <li><a href="/ESH/index.php/mode/mode/mode_info/<?php echo $citem['disease_id'] ?>/1"><?php echo $citem['disease_name'] ?></a></li>
               <?php } ?>
             <?php } ?>
             </ul>
